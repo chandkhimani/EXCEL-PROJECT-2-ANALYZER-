@@ -1,593 +1,409 @@
-::: {align="center"}
-# 📊 PR. 2 ANALYZER --- SALES & CUSTOMER PROFITABILITY ANALYSIS
+ <div align="center">
 
-### ✦ Excel Data Analysis · What-If Modelling · Statistical Analysis · Executive Dashboard ✦
+# 📊 PR. 2 ANALYZER
+## Sales & Customer Profitability Analysis
 
-**An Academic Project in Microsoft Excel**
+**Microsoft Excel | Business Analytics | What-If Analysis | Statistical Analysis**
 
-`<br>`{=html}
-
-![Project](https://img.shields.io/badge/PROJECT-PR.%202%20ANALYZER-1d4ed8?style=for-the-badge&logo=microsoftexcel&logoColor=white)
-![Status](https://img.shields.io/badge/STATUS-ANALYSIS%20WORKBOOK-16a34a?style=for-the-badge)
+![Project](https://img.shields.io/badge/PROJECT-PR.2%20ANALYZER-1d4ed8?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![Status](https://img.shields.io/badge/STATUS-COMPLETED%20ANALYSIS-16a34a?style=for-the-badge)
 ![Focus](https://img.shields.io/badge/FOCUS-BUSINESS%20ANALYTICS-7c3aed?style=for-the-badge)
 
-`<br>`{=html}
+**BCA – Final Year**  
+**Faculty Guide: Prof. Girish Gondaliya**
 
-**🎓 BCA --- Final Year**   •   **📚 Data Analysis Project**\
-**👨‍🏫 Faculty Guide: Prof. Girish Gondaliya**
+</div>
 
-`<br>`{=html}
+---
 
-------------------------------------------------------------------------
+## 📌 1. Project Overview
 
-**📘 Documentation** · **🧹 Data Preparation** · **🧮 Excel Formulas** ·
-**📉 Regression** · **📊 Dashboard Reporting**
-:::
+**PR. 2 Analyzer – Sales & Customer Profitability Analysis** is a Microsoft Excel-based business data analysis project designed to analyze customer orders, sales performance, discounts, and profitability.
 
-> \[!IMPORTANT\] **Evaluator quick access:** Open
-> `PR2_Analyzer_Complete_Workbook.xlsx` and start with the
-> **Interactive_Dashboard** worksheet. Review the source records in
-> **Data_Master**, then inspect **Top_Customers**, **What_If_Analysis**,
-> and **Statistical_Analysis**. Some requirements that depend on native
-> Excel tools (PivotTables, Data Tables, Goal Seek and the Analysis
-> ToolPak) must still be completed or verified in Microsoft Excel
-> Desktop; see the completion checklist below.
+The project uses a dataset containing **200 order records** and applies Excel formulas, Conditional Formatting, What-If Analysis, Descriptive Statistics, Linear Regression, and Dashboard Visualization.
 
-## 🧭 Table of Contents
+The main purpose of this project is to transform raw sales data into meaningful business information and present the results through structured worksheets, calculations, statistical analysis, and interactive-style reporting.
 
--   [✨ Project Overview](#-project-overview)
--   [🎯 Project Objectives](#-project-objectives)
--   [🗂️ Workbook Architecture](#️-workbook-architecture)
--   [🔍 Worksheet-by-Worksheet
-    Breakdown](#-worksheet-by-worksheet-breakdown)
--   [🧠 Excel Formula Toolkit](#-excel-formula-toolkit)
--   [📊 Statistical Analysis](#-statistical-analysis)
--   [📈 Dashboard Visualizations](#-dashboard-visualizations)
--   [🧪 Practical Demonstrations](#-practical-demonstrations)
--   [🚀 How to Review](#-how-to-review)
--   [✅ Submission Checklist](#-submission-checklist)
--   [🏆 Learning Outcomes](#-learning-outcomes)
--   [👩‍🎓 Academic Details](#-academic-details)
+## 🎯 2. Project Objectives
 
-------------------------------------------------------------------------
+- Organize and analyze customer order records.
+- Calculate total sales and profit.
+- Identify top-performing customers.
+- Analyze regional and product category performance.
+- Apply Conditional Formatting to highlight important values.
+- Perform What-If Analysis using different discount scenarios.
+- Calculate Descriptive Statistics for numerical columns.
+- Perform Linear Regression between Sales and Profit.
+- Create charts and a professional Excel Dashboard.
+- Generate meaningful business insights from the dataset.
 
-## ✨ Project Overview
+## 🗂️ 3. Dataset Information
 
-**PR. 2 Analyzer** is a Microsoft Excel business analytics project built
-around order-level sales data. It organizes customer, region, product
-category, sales, quantity, discount, order date and profit information
-into a multi-sheet workbook.
+| Dataset Details | Description |
+|---|---|
+| Dataset Name | `pr 2 data set.xlsx` |
+| Total Records | 200 Orders |
+| Original Columns | 9 |
+| Additional Columns | 3 |
+| File Format | Excel (.xlsx) |
+| Analysis Tool | Microsoft Excel |
 
-The project demonstrates customer-level sales aggregation, conditional
-formatting, discount sensitivity analysis, descriptive statistics,
-linear regression, formula-driven monthly sales growth and an executive
-dashboard.
+### Original Dataset Columns
 
-### 📌 Project Snapshot
+| Column Name | Description |
+|---|---|
+| Customer_ID | Unique customer identification field |
+| Customer_Name | Customer name |
+| Region | Sales region |
+| Product_Category | Product category |
+| Sales | Total sales amount |
+| Quantity | Number of products sold |
+| Discount | Discount applied |
+| Order_Date | Date of order |
+| Profit | Profit earned from the order |
 
-  ---------------------------------------------------------------------------
-  📍 Metric                           📊 Project Scope
-  ----------------------------------- ---------------------------------------
-  🗂️ Total worksheets                 **5**
+### Additional Calculated Columns
 
-  🧾 Source order records             **200**
+| Column Name | Purpose |
+|---|---|
+| Order_Month | Extracts the month from Order_Date |
+| Monthly_Total_Sales | Calculates total sales for each month |
+| Monthly_Sales_Growth_% | Calculates monthly sales growth percentage |
 
-  🧩 Original data fields             **9**
+## 🏗️ 4. Workbook Architecture
 
-  🧮 Formula/helper fields            **3**
+The complete Excel workbook is organized into **5 worksheets**.
 
-  👥 Customer ID/name combinations    **171**
+| No. | Worksheet Name | Description |
+|:---:|---|---|
+| 01 | Data_Master | Original dataset and calculated columns |
+| 02 | Top_Customers | Customer-wise sales and profit analysis |
+| 03 | What_If_Analysis | Discount scenario and profit analysis |
+| 04 | Statistical_Analysis | Descriptive statistics and regression |
+| 05 | Interactive_Dashboard | KPIs, charts, summaries, and business insights |
 
-  📊 Main analysis areas              Customer, discount, statistics,
-                                      regional and category performance
+## 🔍 5. Worksheet-by-Worksheet Analysis
 
-  📁 Source dataset                   `pr 2 data set.xlsx`
+### 01. Data_Master – Data Management
 
-  📁 Analysis workbook                `PR2_Analyzer_Complete_Workbook.xlsx`
-  ---------------------------------------------------------------------------
+This worksheet contains all 200 original order records along with three additional calculated columns.
 
-### 🔄 Analysis Workflow
+**Operations Performed:**
 
-``` text
-      SOURCE DATA             ANALYSIS & MODELLING            REPORTING
-           │                           │                         │
-           ▼                           ▼                         ▼
-     200 Order Records ──► Data_Master + Formula Columns ──► Customer Analysis
-                                        │                  ├─ What-If Scenarios
-                                        │                  ├─ Regression & Statistics
-                                        ▼                  └─ Dashboard Charts
-                                  Business Insights
-```
+- Organized the original dataset.
+- Added Order_Month using date functions.
+- Calculated Monthly_Total_Sales.
+- Calculated Monthly_Sales_Growth_%.
+- Converted the dataset into an Excel Table named `SalesData`.
 
-------------------------------------------------------------------------
+**Excel Features Used:**
 
-## 🎯 Project Objectives
+- DATE()
+- YEAR()
+- MONTH()
+- EDATE()
+- SUMIFS()
+- IF()
+- IFERROR()
 
--   🗃️ **Structure the source data** in a master worksheet while
-    retaining the original nine fields.
--   🧮 **Create formula-driven columns** for order month, monthly sales
-    and monthly sales growth.
--   🏆 **Identify high-value customers** using customer aggregation and
-    Top 10 conditional formatting.
--   🎛️ **Model discount scenarios** and compare estimated profit at
-    different discount rates.
--   📉 **Study the relationship between Sales and Profit** using simple
-    linear regression.
--   📊 **Summarize numerical variables** using descriptive statistics.
--   📈 **Communicate business performance** with KPIs, charts and
-    concise data-storytelling observations.
+**Custom Number Format:**
 
-------------------------------------------------------------------------
-
-## 🗂️ Workbook Architecture
-
-  ------------------------------------------------------------------------------------
-               \#              📑 Worksheet                🎯 Purpose
-  ---------------------------- --------------------------- ---------------------------
-               01              **Data_Master**             Original order records plus
-                                                           formula-driven month and
-                                                           growth columns; Excel table
-                                                           `SalesData`
-
-               02              **Top_Customers**           Customer ID/name
-                                                           aggregation, sales and
-                                                           profit totals, Top 10
-                                                           highlighting, INDEX + MATCH
-                                                           lookup
-
-               03              **What_If_Analysis**        Discount scenario table
-                                                           from 0% to 30% in 5%
-                                                           increments, projected
-                                                           profit and native Excel
-                                                           setup guidance
-
-               04              **Statistical_Analysis**    Descriptive statistics for
-                                                           Sales, Quantity, Discount
-                                                           and Profit;
-                                                           Profit-versus-Sales
-                                                           regression output
-
-               05              **Interactive_Dashboard**   KPI cells,
-                                                           regional/monthly/category
-                                                           summaries, charts,
-                                                           pivot-style cross-tab
-                                                           summaries and storytelling
-                                                           callout
-  ------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-## 🔍 Worksheet-by-Worksheet Breakdown
-
-### 01 · 🗃️ Data_Master --- Source Records & Formula Columns
-
-Contains the 200 source order records and preserves these original
-fields:
-
-`Customer_ID`, `Customer_Name`, `Region`, `Product_Category`, `Sales`,
-`Quantity`, `Discount`, `Order_Date`, and `Profit`.
-
-Three additional formula-driven columns are included:
-
-  -----------------------------------------------------------------------
-  🧩 Added Column                     💡 Purpose
-  ----------------------------------- -----------------------------------
-  `Order_Month`                       Extracts the first day of the
-                                      order's month for monthly grouping
-
-  `Monthly_Total_Sales`               Calculates total sales for the
-                                      corresponding calendar month
-
-  `Monthly_Sales_Growth_%`            Compares the current month's sales
-                                      with the previous calendar month's
-                                      sales
-  -----------------------------------------------------------------------
-
-The source records are formatted as an Excel table named
-**`SalesData`**.
-
-**Custom number format for monthly growth:**
-
-``` excel
+```excel
 [Color10]"▲ "0.0%;[Red]"▼ "0.0%;[Black]"▬ "0.0%
 ```
 
-The first month without a prior-month comparison displays 0% through the
-formula's error-handling logic.
+This format displays upward, downward, and neutral monthly growth indicators.
 
-### 02 · 🏆 Top_Customers --- Customer Value Analysis
+### 02. Top_Customers – Customer Profitability Analysis
 
-Groups transactions by **Customer_ID + Customer_Name** and calculates:
+This worksheet analyzes customer performance by grouping records using Customer_ID and Customer_Name.
 
--   Total Sales
--   Total Profit
--   Number of Orders
--   Total Quantity
+**Analysis Performed:**
 
-The Total Sales column uses the **Top 10 Items** conditional-formatting
-rule with a soft green fill and dark green text.
+- Total Sales by Customer
+- Total Profit by Customer
+- Number of Orders
+- Total Quantity
+- Identification of Top 10 Customers
 
-**INDEX + MATCH lookup examples:**
+**Excel Features Used:**
 
-``` excel
+- SUMIF()
+- SUMIFS()
+- INDEX()
+- MATCH()
+- MAX()
+- Conditional Formatting
+
+**INDEX + MATCH Formula Examples:**
+
+```excel
 =INDEX(B5:B175,MATCH(MAX(C5:C175),C5:C175,0))
-=INDEX(A5:A175,MATCH(MAX(C5:C175),C5:C175,0))
-=MAX(C5:C175)
 ```
 
-These patterns return the top aggregated customer name, customer ID and
-maximum total sales. Adjust the ending row if the customer aggregation
-changes.
+```excel
+=INDEX(A5:A175,MATCH(MAX(C5:C175),C5:C175,0))
+```
 
-> \[!NOTE\] The source dataset contains Customer IDs that appear with
-> more than one Customer_Name. For this reason, the aggregation keeps
-> the ID/name combination visible rather than silently assuming that
-> every ID maps to one unique name.
+These formulas retrieve the customer name and customer ID associated with the highest aggregated sales value.
 
-### 03 · 🎛️ What_If_Analysis --- Discount Sensitivity
+**Conditional Formatting:**
 
-Compares projected profit at discount rates from **0% to 30% in 5%
-increments**.
+The Top 10 Items rule highlights customers with the highest total sales using green formatting.
 
-  📌 Scenario     🎯 Discount Rate
-  ------------- ------------------
-  01                            0%
-  02                            5%
-  03                           10%
-  04                           15%
-  05                           20%
-  06                           25%
-  07                           30%
+### 03. What_If_Analysis – Discount Scenario Analysis
 
-The worksheet shows current total profit, projected profit and change
-versus current profit.
+This worksheet evaluates how different discount percentages may affect estimated profit.
 
-**Scenario model assumption:** the model estimates the effect of
-changing discount by adjusting reported profit by the difference between
-the current discount amount and the scenario discount amount, applied to
-Sales. This is a simplified sensitivity assumption; it does not model
-changes in customer demand, costs, product mix or order volume.
+**Discount Scenarios:**
 
-**Native Excel Data Table:** The worksheet includes instructions for
-setting up a one-variable Data Table through **Data → What-If Analysis →
-Data Table**.
+| Scenario | Discount Rate |
+|:---:|:---:|
+| 01 | 0% |
+| 02 | 5% |
+| 03 | 10% |
+| 04 | 15% |
+| 05 | 20% |
+| 06 | 25% |
+| 07 | 30% |
 
-**Goal Seek:** The worksheet also documents how to use Goal Seek to find
-a discount input that reaches a chosen profit target.
+**Analysis Includes:**
 
-> \[!IMPORTANT\] The scenario comparison is formula-driven. The native
-> Excel Data Table and Goal Seek procedures must be run in Excel Desktop
-> if the evaluator specifically requires those Excel features to be
-> demonstrated.
+- Current Total Profit
+- Projected Profit
+- Profit Difference
+- Discount Comparison
 
-### 04 · 📉 Statistical_Analysis --- Descriptive Statistics & Regression
+**Excel Features:**
 
-Descriptive statistics are provided for four numerical fields:
+- What-If Analysis
+- Data Table
+- Goal Seek
+- Scenario Calculations
 
--   `Sales`
--   `Quantity`
--   `Discount`
--   `Profit`
+**Business Purpose:**
 
-The summary includes **Mean, Standard Error, Median, Mode, Standard
-Deviation, Sample Variance, Kurtosis, Skewness, Range, Minimum, Maximum,
-Sum and Count**.
+To understand how changes in discount percentages can influence estimated business profitability.
 
-#### Linear Regression --- Profit vs Sales
+**Model Assumption:** The projected profit calculation adjusts reported profit according to the difference between the existing discount and the selected scenario discount, applied to Sales. It is a simplified estimation and does not account for demand, cost, or product-mix changes.
 
--   **Dependent variable (Y):** Profit
--   **Independent variable (X):** Sales
+### 04. Statistical_Analysis – Statistical & Regression Analysis
 
-The workbook reports Multiple R, R Square, Adjusted R Square, Intercept,
-Sales coefficient, observations and the Sales slope p-value.
+This worksheet performs statistical analysis on four numerical variables:
 
-**Regression equation:**
+- Sales
+- Quantity
+- Discount
+- Profit
 
-``` text
+**Descriptive Statistics:**
+
+| Statistical Measure | Purpose |
+|---|---|
+| Mean | Calculates average value |
+| Standard Error | Measures estimated sampling precision |
+| Median | Identifies the middle value |
+| Mode | Identifies the most frequent value |
+| Standard Deviation | Measures data variation |
+| Sample Variance | Measures data dispersion |
+| Kurtosis | Describes distribution shape |
+| Skewness | Measures distribution asymmetry |
+| Range | Difference between maximum and minimum |
+| Minimum | Lowest value |
+| Maximum | Highest value |
+| Sum | Total of values |
+| Count | Number of observations |
+
+#### Linear Regression Analysis
+
+**Analysis:** Relationship between Sales and Profit.
+
+| Variable | Description |
+|---|---|
+| Independent Variable (X) | Sales |
+| Dependent Variable (Y) | Profit |
+
+**Regression Equation:**
+
+```text
 Estimated Profit = Intercept + (Sales Coefficient × Sales)
 ```
 
-**Dataset result:** R² is approximately **0.5982** and the Sales
-coefficient is approximately **0.3509**. In this simple model, Sales
-explains about 59.8% of the observed variation in Profit. The
-coefficient describes an association in this dataset; it does not
-establish causation.
+**Key Results:**
 
-**Native Analysis ToolPak procedure:** Enable the Analysis ToolPak in
-Excel, then select **Data → Data Analysis → Regression**. Set Profit as
-the Y input range and Sales as the X input range. The workbook also
-provides the input-range guidance.
+| Regression Metric | Result |
+|---|---:|
+| R Square | Approximately 0.5982 |
+| Sales Coefficient | Approximately 0.3509 |
 
-> \[!NOTE\] The workbook includes calculated regression and
-> descriptive-statistics outputs. If the assignment requires screenshots
-> or a live demonstration of the Excel Data Analysis ToolPak dialog, run
-> the corresponding ToolPak procedures in Excel Desktop.
+**Interpretation:**
 
-### 05 · 📊 Interactive_Dashboard --- Executive Summary
+The R Square value of approximately 0.5982 indicates that Sales explains around 59.8% of the observed variation in Profit in this linear regression model.
 
-The dashboard worksheet contains:
+The Sales coefficient represents the estimated relationship between Sales and Profit in the dataset. This relationship does not establish causation.
 
-**KPI headings** - Total Sales - Total Profit - Number of Orders -
-Average Discount - Profit Margin
+**Excel Feature Used:**
 
-**Summary sections** - Total Sales and Total Profit by Region - Monthly
-Sales Trend - Sales Distribution by Product Category - Region × Product
-Category sales summary - Region × Product Category profit summary
+Data → Data Analysis → Regression
 
-**Charts** - Bar/Column Chart --- Total Sales and Profit by Region -
-Line Chart --- Monthly Sales Trend - Doughnut Chart --- Sales
-Distribution by Product Category
+Data → Data Analysis → Descriptive Statistics
 
-**Dynamic timestamp:**
+### 05. Interactive_Dashboard – Business Performance Dashboard
 
-``` excel
+The Interactive_Dashboard worksheet presents the important results of the complete analysis in one place.
+
+**Key Performance Indicators (KPIs):**
+
+| KPI | Description |
+|---|---|
+| Total Sales | Overall sales amount |
+| Total Profit | Overall profit earned |
+| Number of Orders | Total order records |
+| Average Discount | Average discount percentage |
+| Profit Margin | Profit as a percentage of sales |
+
+**Dashboard Summary Tables:**
+
+- Regional Sales and Profit
+- Monthly Sales Trend
+- Product Category Sales
+- Region vs Product Category Sales
+- Region vs Product Category Profit
+
+**Dashboard Charts:**
+
+| Chart | Purpose |
+|---|---|
+| Bar/Column Chart | Regional Sales and Profit Comparison |
+| Line Chart | Monthly Sales Trend |
+| Doughnut Chart | Product Category Sales Distribution |
+
+**Dynamic Timestamp Formula:**
+
+```excel
 =NOW()
 ```
 
-The timestamp is formatted as:
+Displays the current workbook recalculation date and time.
+
+## 🧮 6. Excel Functions & Tools Used
+
+| Function / Feature | Application |
+|---|---|
+| SUM() | Calculates total values |
+| SUMIF() | Conditional summation |
+| SUMIFS() | Multiple-condition summation |
+| SUMPRODUCT() | Discount scenario calculations |
+| IF() | Logical conditions |
+| IFERROR() | Error handling |
+| DATE() | Date calculations |
+| YEAR() | Extracts year |
+| MONTH() | Extracts month |
+| EDATE() | Calculates monthly date intervals |
+| INDEX() | Retrieves a value |
+| MATCH() | Finds a matching position |
+| MAX() | Finds the highest value |
+| NOW() | Displays date and time |
+| Conditional Formatting | Highlights important values |
+| What-If Analysis | Compares alternative scenarios |
+| Goal Seek | Finds an input for a target result |
+| Data Analysis ToolPak | Statistical analysis and regression |
+
+## 📊 7. Business Insights & Analysis
+
+The project focuses on the following business questions:
+
+| No. | Business Question | Analysis |
+|:---:|---|---|
+| 01 | Which customers generate the highest sales? | Top Customer Analysis |
+| 02 | Which region performs better? | Regional Sales Analysis |
+| 03 | How does sales performance change monthly? | Monthly Sales Analysis |
+| 04 | Which product category contributes more sales? | Category Analysis |
+| 05 | How do discount changes affect estimated profit? | What-If Analysis |
+| 06 | What is the relationship between Sales and Profit? | Linear Regression |
+
+## 🚀 8. How to Review the Project
+
+Follow these steps to explore the workbook:
+
+1. Open `PR2_Analyzer_Complete_Workbook.xlsx` in Microsoft Excel Desktop.
+2. Start with the `Interactive_Dashboard` worksheet.
+3. Review the original dataset in `Data_Master`.
+4. Explore customer performance in `Top_Customers`.
+5. Compare discount scenarios in `What_If_Analysis`.
+6. Review statistical calculations in `Statistical_Analysis`.
+7. Verify formulas, charts, and analysis outputs.
+8. Run native Excel features where required by the assignment.
+9. Save the final workbook after verification.
+
+## 🛠️ 9. Software & Technologies
+
+| Tool | Purpose |
+|---|---|
+| Microsoft Excel | Data analysis and calculations |
+| Excel Formulas | Data processing and aggregation |
+| Conditional Formatting | Data highlighting |
+| What-If Analysis | Scenario modelling |
+| Data Analysis ToolPak | Statistical calculations |
+| Excel Charts | Data visualization |
+| Markdown | Project documentation |
+| GitHub | Project storage and presentation |
+
+## ✅ 10. Project Completion Checklist
+
+- [x] Original dataset imported.
+- [x] 200 order records organized.
+- [x] Original nine columns retained.
+- [x] Three calculated columns added.
+- [x] Excel Table created.
+- [x] Customer-wise analysis prepared.
+- [x] Top 10 Conditional Formatting prepared.
+- [x] INDEX and MATCH formulas included.
+- [x] Discount scenarios from 0% to 30% prepared.
+- [x] Descriptive Statistics prepared.
+- [x] Linear Regression output included.
+- [x] Monthly Sales Growth number format applied.
+- [x] Dashboard KPIs prepared.
+- [x] Dashboard charts and summaries prepared.
+- [ ] Native Excel Data Table verified, if required.
+- [ ] Goal Seek demonstrated, if required.
+- [ ] Native PivotTables verified, if required.
+- [ ] Analysis ToolPak procedures verified in Excel Desktop, if required.
+- [ ] Final workbook formulas and charts checked.
+
+> **Note:** Formula-based summaries and native Excel features are not identical. If the instructor requires actual Data Tables, Goal Seek, PivotTables, or Analysis ToolPak demonstrations, those operations should be performed and verified in Microsoft Excel Desktop.
+
+## 🏆 11. Learning Outcomes
+
+Through this project, I gained practical experience in Microsoft Excel and business data analysis.
+
+I learned how to organize raw data, apply formulas, analyze customer profitability, use Conditional Formatting, perform discount scenario analysis, calculate descriptive statistics, and understand linear regression.
+
+I also practiced creating dashboards, visualizing business performance, and presenting analytical results in a structured and professional format.
+
+## 👨‍🎓 12. Academic Details
+
+| Field | Information |
+|---|---|
+| Student Name | Chand Khimani |
+| Academic Program | Bachelor of Computer Applications (BCA) – Final Year |
+| Course | BCA Data Analysis |
+| Project Number | PR. 2 |
+| Project Title | PR. 2 Analyzer – Sales & Customer Profitability Analysis |
+| Faculty Guide | Prof. Girish Gondaliya |
+| Software | Microsoft Excel |
+| Documentation | README.md |
 
-``` text
-yyyy-mm-dd hh:mm:ss
-```
+---
 
-It updates when Excel recalculates the workbook; it is not a permanent
-audit timestamp.
+<div align="center">
 
-**Data storytelling callout:** The dashboard highlights the leading
-sales region, the category with the highest profit margin and the
-observed Discount-versus-Profit correlation.
+## 🌟 THANK YOU FOR REVIEWING MY PROJECT!
 
-> \[!NOTE\] The region/category matrices in this workbook are
-> pivot-style summary tables. They are not native Excel PivotTables and
-> do not automatically provide PivotTable slicers or refresh behavior.
-> Create native PivotTables in Excel Desktop if those are required for
-> assessment.
+**PR. 2 ANALYZER**
 
-------------------------------------------------------------------------
+*Sales & Customer Profitability Analysis*
 
-## 🧠 Excel Formula Toolkit
+**Microsoft Excel | Business Analytics | Statistical Reporting**
 
-  -----------------------------------------------------------------------
-  🧩 Function / Feature               ⚙️ Application
-  ----------------------------------- -----------------------------------
-  `SUM`                               Calculate total sales and profit
-
-  `SUMIF` / `SUMIFS`                  Aggregate values by region,
-                                      category or date range
-
-  `SUMPRODUCT`                        Estimate profit impact across sales
-                                      and discount values
-
-  `IF` / `IFERROR`                    Apply conditions and handle missing
-                                      prior-month comparisons
-
-  `DATE` / `YEAR` / `MONTH`           Derive the calendar month from
-                                      Order_Date
-
-  `EDATE`                             Set month boundaries for monthly
-                                      calculations
-
-  `INDEX` + `MATCH`                   Retrieve top customer information
-
-  `MAX`                               Identify the highest aggregated
-                                      customer sales
-
-  `NOW`                               Display the analysis recalculation
-                                      timestamp
-
-  Conditional Formatting              Highlight the Top 10 customer sales
-                                      values
-
-  What-If Analysis                    Explore discount sensitivity and
-                                      target-profit scenarios
-
-  Data Analysis ToolPak               Run regression and descriptive
-                                      statistics in Excel
-  -----------------------------------------------------------------------
-
-### 💻 Selected Formula Patterns
-
-``` excel
-=SUM(SalesData[Sales])
-
-=SUMIFS(SalesData[Sales],SalesData[Order_Month],J4)
-
-=INDEX(Customer_Name_Range,MATCH(MAX(Total_Sales_Range),Total_Sales_Range,0))
-
-=NOW()
-```
-
-*These are representative formula patterns. The workbook's actual
-formulas should be inspected in the Excel Formula Bar.*
-
-------------------------------------------------------------------------
-
-## 📊 Statistical Analysis
-
-  -----------------------------------------------------------------------
-  📌 Measure                          📊 Purpose
-  ----------------------------------- -----------------------------------
-  Mean / Median / Mode                Describe central tendency
-
-  Standard Error / Standard Deviation Describe sampling precision and
-                                      spread
-
-  Sample Variance                     Measure dispersion
-
-  Kurtosis / Skewness                 Describe distribution shape
-
-  Range / Minimum / Maximum           Show the spread and endpoints
-
-  Sum / Count                         Show total value and number of
-                                      observations
-
-  R Square / Adjusted R Square        Describe regression fit
-
-  Intercept / Sales Coefficient       Define the fitted linear
-                                      relationship
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-## 📈 Dashboard Visualizations
-
-  -----------------------------------------------------------------------
-  📊 Visualization                    📌 Business Question
-  ----------------------------------- -----------------------------------
-  **01 · Regional Sales & Profit**    Which region contributes the most
-                                      sales and profit?
-
-  **02 · Monthly Sales Trend**        How do sales change across the
-                                      available order months?
-
-  **03 · Product Category Sales Mix** What percentage of sales comes from
-                                      each product category?
-
-  **04 · Region × Category Summary**  How are sales and profit
-                                      distributed across regions and
-                                      product categories?
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-## 🧪 Practical Demonstrations
-
-  -------------------------------------------------------------------------
-  🎯 Demo                 🖱️ Action                 👀 Expected Observation
-  ----------------------- ------------------------- -----------------------
-  Top customer analysis   Open `Top_Customers`      Review aggregated sales
-                                                    and highlighted Top 10
-                                                    values
-
-  Customer lookup         Inspect the INDEX + MATCH Top customer name and
-                          cells                     ID are returned from
-                                                    the aggregation
-
-  Discount sensitivity    Open `What_If_Analysis`   Compare projected
-                                                    profit across the seven
-                                                    discount rates
-
-  Regression              Open                      Review R², adjusted R²,
-                          `Statistical_Analysis`    intercept and Sales
-                                                    coefficient
-
-  Monthly trend           Open                      Compare sales totals
-                          `Interactive_Dashboard`   across calendar months
-
-  Timestamp               Inspect cell B2 on the    See the latest workbook
-                          dashboard                 recalculation time
-
-  Data refresh            Use **Data → Refresh      Refresh the PivotTables
-                          All** after native        connected to the source
-                          PivotTables are created   table
-  -------------------------------------------------------------------------
-
-> \[!TIP\] For a viva demonstration, begin with the dashboard, explain
-> one regional result, show the Top 10 customer rule, compare two
-> discount scenarios, and finish by explaining what the regression R²
-> means.
-
-------------------------------------------------------------------------
-
-## 🚀 How to Review
-
-1.  📂 Open `PR2_Analyzer_Complete_Workbook.xlsx` in **Microsoft Excel
-    Desktop**.
-2.  🏠 Start with **Interactive_Dashboard** to review the KPIs, charts
-    and data-story callout.
-3.  🗃️ Open **Data_Master** and inspect the original fields and three
-    calculated columns.
-4.  🏆 Open **Top_Customers** and review the customer aggregation and
-    Top 10 formatting.
-5.  🎛️ Open **What_If_Analysis** and compare the discount scenarios.
-6.  📉 Open **Statistical_Analysis** and review the descriptive
-    statistics and regression output.
-7.  🧪 Complete and verify the native Excel features listed in the
-    submission checklist.
-8.  💾 Save the final workbook after verifying formulas, charts and any
-    native Excel analysis features.
-
-**💻 Compatibility:** Microsoft Excel Desktop is recommended for the
-native Data Table, Goal Seek, PivotTables and Analysis ToolPak
-demonstrations. Availability of the `GROUPBY` function depends on the
-Excel version.
-
-------------------------------------------------------------------------
-
-## ✅ Submission Checklist
-
--   [x] Five required worksheets created
--   [x] Original 200 order records included in Data_Master
--   [x] Three formula-driven helper columns added
--   [x] Customer aggregation and Top 10 conditional-formatting rule
-    prepared
--   [x] INDEX + MATCH customer lookup formulas included
--   [x] Discount scenario comparison from 0% to 30% prepared
--   [x] Descriptive statistics for four numerical variables included
--   [x] Profit-versus-Sales regression output included
--   [x] Monthly sales growth arrow number format included
--   [x] Dashboard timestamp formula included
--   [x] Regional, monthly and category charts included
--   [x] Pivot-style region/category summary tables included
--   [x] Three data-storytelling observations included
--   [ ] Run and verify a native Excel What-If Data Table
--   [ ] Run and verify Goal Seek in Excel Desktop
--   [ ] Create and verify native PivotTables with Grand Totals and
-    required subtotals
--   [ ] Run the Analysis ToolPak Regression and Descriptive Statistics
-    procedures in Excel Desktop if required by the evaluator
--   [ ] Test formulas and charts after opening the workbook in Excel
-    Desktop
--   [ ] Confirm student details and final filenames before submission
--   [ ] Submit the Excel workbook and `README.md` together
-
-------------------------------------------------------------------------
-
-## 🏆 Learning Outcomes
-
-Through this project, I practiced organizing order-level business data,
-building formula-driven analysis columns, aggregating customer
-performance, applying conditional formatting and modelling discount
-scenarios.
-
-I also practiced descriptive statistics, simple linear regression,
-monthly trend analysis, dashboard chart design and communicating
-business observations in a structured Excel report.
-
-------------------------------------------------------------------------
-
-## 👩‍🎓 Academic Details
-
-  -----------------------------------------------------------------------
-  🏷️ Field                            📋 Information
-  ----------------------------------- -----------------------------------
-  **Student Name**                    Chand Khimani
-
-  **Academic Program**                Bachelor of Computer Applications
-                                      (BCA) --- Final Year
-
-  **Course Focus**                    BCA Data Analysis
-
-  **Project Title**                   PR. 2 Analyzer --- Sales & Customer
-                                      Profitability Analysis
-
-  **Faculty Guide**                   Prof. Girish Gondaliya
-
-  **Tools**                           Microsoft Excel · Excel Formulas ·
-                                      Markdown
-
-  **Deliverables**                    Excel Workbook · README
-                                      Documentation
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-::: {align="center"}
-### 🌟 Thank You for Reviewing My Project!
-
-**PR. 2 Analyzer --- Sales & Customer Profitability Analysis**\
-*Microsoft Excel · Business Analytics · Statistical Reporting*
-
-[⬆️ Back to
-Top](#-pr-2-analyzer--sales--customer-profitability-analysis)
-:::
+</div>
